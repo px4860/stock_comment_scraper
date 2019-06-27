@@ -1,1 +1,3 @@
 # stock_comment_scraper
+在命令行中先进入第一层ad_report目录，再输入scrapy crawl dmoz进行爬取<br>
+爬取前记得设置下起始url以及pipline中的文件储存位置
