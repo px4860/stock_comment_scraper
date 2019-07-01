@@ -23,7 +23,7 @@ class DmozSpider(scrapy.Spider):
             item['id'] = p.xpath('./@data-comment').extract()[0]
             # 去除空评论
             try:
-                item['comment'] = p.xpath('.//p[@class="comText"]/text()').extract()[0]
+                item['comment'] = p.xpath('.//p[@class="comText"]/text()').extract()
             except IndexError:
                 continue
             item['datetime'] = p.xpath('.//p[@class="comWriter"]/span/a/text()').extract()[0]
