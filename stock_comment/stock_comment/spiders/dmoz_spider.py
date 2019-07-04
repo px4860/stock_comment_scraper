@@ -7,7 +7,28 @@ import json
 class DmozSpider(scrapy.Spider):
     name = "dmoz"
     start_urls = [
-        "https://finance.yahoo.co.jp/cm/message/1008308/8308/19?offset=1&rv=1"
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/1?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/2?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/3?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/4?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/5?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/6?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/7?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/8?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/9?offset=1&rv=1",
+        "https://finance.yahoo.co.jp/cm/message/1008308/8308/10?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/11?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/12?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/13?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/14?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/15?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/16?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/17?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/18?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/19?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/20?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/21?offset=1&rv=1",
+        # "https://finance.yahoo.co.jp/cm/message/1008308/8308/22?offset=1&rv=1",
     ]
 
     def parse(self, response):
