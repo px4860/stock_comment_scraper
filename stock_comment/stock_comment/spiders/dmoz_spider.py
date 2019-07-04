@@ -1,6 +1,6 @@
 import scrapy
 import scrapy.downloadermiddlewares.redirect
-from ad_report.items import DmozItem
+from stock_comment.items import DmozItem
 import json
 
 
@@ -37,6 +37,8 @@ class DmozSpider(scrapy.Spider):
                 item['tendency'] = 0
             elif p.xpath('.//span[@class="emotionLabel strongest"]'):
                 item['tendency'] = 1
+            elif p.xpath('.//span[@class="emotionLabel both"]'):
+                item['tendency'] = 2
             else:
                 item['tendency'] = None
             yield item

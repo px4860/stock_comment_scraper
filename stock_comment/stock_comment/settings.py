@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for ad_report project
+# Scrapy settings for stock_comment project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,16 +9,16 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'ad_report'
+BOT_NAME = 'stock_comment'
 
 LOG_LEVEL = 'INFO'
 
-SPIDER_MODULES = ['ad_report.spiders']
-NEWSPIDER_MODULE = 'ad_report.spiders'
+SPIDER_MODULES = ['stock_comment.spiders']
+NEWSPIDER_MODULE = 'stock_comment.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'ad_report (+http://www.yourdomain.com)'
+#USER_AGENT = 'stock_comment (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36'
 
 # Obey robots.txt rules
@@ -50,14 +50,14 @@ DEFAULT_REQUEST_HEADERS = {
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 # SPIDER_MIDDLEWARES = {
-#    # 'ad_report.middlewares.AdReportSpiderMiddleware': 543,
-#    'ad_report.middlewares.RandomUserAgentMiddleware': 543,
+#    # 'stock_comment.middlewares.AdReportSpiderMiddleware': 543,
+#    'stock_comment.middlewares.RandomUserAgentMiddleware': 543,
 # }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
-#    'ad_report.middlewares.RandomUserAgentMiddleware': 543,
+#    'stock_comment.middlewares.RandomUserAgentMiddleware': 543,
 # }
 HTTPERROR_ALLOWED_CODES = [400, 307, 405, 415, 302]
 
@@ -72,7 +72,8 @@ REDIRECT_ENABLED = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'ad_report.pipelines.AdReportPipeline': 300,
+   # 'stock_comment.pipelines.AdReportPipeline': 300,
+   'stock_comment.pipelines.CSVExportPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
