@@ -8,10 +8,5 @@ import scrapy
 
 
 class DmozItem(scrapy.Item):
-    id = scrapy.Field()
-    comment = scrapy.Field()
-    datetime = scrapy.Field()
-    like = scrapy.Field()
-    unlike = scrapy.Field()
-    reply = scrapy.Field()
-    tendency = scrapy.Field()
+    title = scrapy.Field()
+    content = scrapy.Field()
